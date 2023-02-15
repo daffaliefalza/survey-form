@@ -1,0 +1,109 @@
+:root {
+  --color-white: #f3f3f3;
+  --color-darkblue: #1b1b32;
+  --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+  --color-green: #37af65;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: var(--color-darkblue-alpha);
+  color: var(--color-white);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--color-darkblue);
+  background-image: linear-gradient(
+      115deg,
+      rgba(58, 58, 158, 0.8),
+      rgba(136, 136, 206, 0.7)
+    ),
+    url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.headline {
+   text-align: center;
+   line-height: 1;
+}
+
+.headline h1 {
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.headline p {
+  font-weight: 300;
+  margin-top: 0;
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+.headline,form {
+    max-width: 720px;
+    margin: 3em auto;
+    border-radius: 5px;
+    
+}
+
+form {
+  background-color: var(--color-darkblue-alpha);
+  padding: 2.5em;
+}
+
+form input[type="text"], 
+input[type="email"],
+input[type="number"],
+select[id="dropdown"],
+select[id="feature"] {
+  display: block;
+  width: 100%;
+  padding: 1em 1em;
+  border-radius: 5px;
+  margin: 0.8em 0 1.5em 0;
+  border: 0;
+}
+
+
+
+form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  border: 0;
+  padding: 0.5em 1.2em;
+  font-size: 1.1rem;
+  border-radius: 5px;
+}
+
+form button {
+  width: 100%;
+  background-color: var(--color-green);
+  padding: 1em 0;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.123rem;
+  border: 0;
+}
+
+* > ::placeholder {
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 1.05rem;
+}
+
